@@ -36,8 +36,9 @@ def is_inside(r, c, rows, cols):
 
 
 def main():
-    n, _ = map(int, sys.stdin.readline().split())
-    grid = [sys.stdin.readline().rstrip() for _ in range(n)]
+    tokens = sys.stdin.read().split()
+    n = int(tokens[0])
+    grid = tokens[2:2 + n]
     print(count_rooms(grid))
 
 
